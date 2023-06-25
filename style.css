@@ -1,0 +1,415 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 65.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --UI-Sub-heading: hsl(276, 100%, 81%);
+  --Left-chat-text: hsl(276, 55%, 52%);
+  --Right-chat-text: hsl(271, 15%, 43%);
+  --Place-holder-text: hsl(206, 6%, 79%);
+  --Main-heading-text: hsl(271, 36%, 24%);
+  --P-text: hsl(270, 7%, 64%);
+  --LightMagenta: hsl(293, 100%, 63%);
+  --LightViolet: hsl(264, 100%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --App-bg: hsl(270, 20%, 96%);
+  --Submit-bg: hsl(271, 36%, 24%);
+  --Radio-btn-outline: hsl(289, 100%, 72%);
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif;
+  background: var(--App-bg);
+  color: var(--P-text);
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+@media screen and (width <= 768px) {
+  main {
+    gap: 5rem;
+    grid-template-columns: 1fr;
+  }
+}
+main::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 0;
+  left: -10%;
+  width: 45%;
+  height: 90%;
+  background-image: linear-gradient(to bottom, var(--LightMagenta), var(--LightViolet), var(--LightViolet));
+  border-radius: 0 0 50% 50%;
+  -webkit-border-radius: 0 0 50% 50%;
+  -moz-border-radius: 0 0 50% 50%;
+  -ms-border-radius: 0 0 50% 50%;
+  -o-border-radius: 0 0 50% 50%;
+}
+@media screen and (width <= 1080px) {
+  main::before {
+    left: -25%;
+    height: 90%;
+    width: 50%;
+  }
+}
+@media screen and (width <= 768px) {
+  main::before {
+    left: -50%;
+    height: 65%;
+    width: 100%;
+  }
+}
+
+.app_section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 5em;
+}
+@media screen and (width <= 768px) {
+  .app_section {
+    margin-top: 5em;
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+.main_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1em;
+  margin-bottom: 5em;
+}
+.main_section h1 {
+  color: var(--Main-heading-text);
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+@media screen and (width <= 768px) {
+  .main_section h1 {
+    text-align: center;
+  }
+}
+.main_section p {
+  max-width: 450px;
+}
+@media screen and (width <= 768px) {
+  .main_section p {
+    text-align: center;
+  }
+}
+@media screen and (width <= 768px) {
+  .main_section {
+    align-items: center;
+    padding: 0 1rem;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    opacity: 0.5;
+  }
+}
+.phone {
+  background: var(--White);
+  max-width: 300px;
+  border-radius: 20px;
+  padding: 0.5em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.205);
+}
+
+.phone1 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.phone1 .preload {
+  background: black;
+  height: 600px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.phone1 .preload .tag_name {
+  font-size: 2.5rem;
+  color: var(--LightMagenta);
+  letter-spacing: 3px;
+}
+.phone1 .preload .circle-1 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, var(--LightMagenta), var(--LightViolet));
+  border-radius: 50%;
+}
+.phone1 .preload .circle-1 .circle-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  background: black;
+  border-radius: 50%;
+}
+.phone1 .preload .circle-1 .circle-2 img {
+  width: 100px;
+  height: auto;
+}
+
+.phone2 {
+  display: none;
+}
+
+.phone_title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2em 1em 0.5em 1em;
+  background-image: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
+  border-radius: 20px 20px 0 0;
+}
+.phone_title .phone_subheading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.phone_title .phone_subheading .left_arrow {
+  color: var(--UI-Sub-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.phone_title .phone_subheading .name h2 {
+  font-size: 1.4rem;
+  color: var(--UI-Sub-heading);
+}
+.phone_title .phone_subheading .name small {
+  font-size: 1.1rem;
+}
+.phone_title .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+.phone_title .menu div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--UI-Sub-heading);
+}
+.phone_title::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 50%;
+  height: 20px;
+  background: var(--White);
+  border-radius: 0 0 15px 15px;
+  transform: translateX(-50%);
+}
+
+.avator {
+  width: 30px;
+  height: 30px;
+  outline: 1px solid var(--White);
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--App-bg);
+  padding: 1em 0.5em;
+}
+
+.message {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 65%;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  padding: 0.7em;
+  border-radius: 10px;
+}
+
+.left {
+  align-self: start;
+  color: var(--Left-chat-text);
+  background: rgb(236, 236, 236);
+}
+
+.right {
+  align-self: end;
+  color: var(--right-chat-text);
+  background: var(--White);
+}
+
+.chat-dog {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 65%;
+  padding: 0.5em;
+  border-radius: 15px 15px 15px 10px;
+  margin: 0.3em 0;
+  background-image: linear-gradient(to right, var(--LightMagenta), var(--LightViolet));
+}
+.price .radio {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--Radio-btn-outline);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.price .radio:hover {
+  background: var(--App-bg);
+}
+.price p {
+  font-size: 1.2rem;
+  color: var(--App-bg);
+}
+.price .num {
+  font-size: 1.5rem;
+  color: var(--App-bg);
+}
+
+.send {
+  background: var(--White);
+  padding: 0.5em 1em;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  border-radius: 25px;
+}
+.send input {
+  outline: none;
+  border: none;
+}
+.send input::-moz-placeholder {
+  color: var(--Place-holder-text);
+  font-family: inherit;
+}
+.send input::placeholder {
+  color: var(--Place-holder-text);
+  font-family: inherit;
+}
+.send .send-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0.5em;
+  cursor: pointer;
+  background: var(--Submit-bg);
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  background-image: linear-gradient(375deg, var(--LightMagenta), var(--LightViolet));
+  color: var(--UI-bg);
+  padding: 0.5em 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid var(--White);
+}
+
+.attribution a {
+  color: yellow;
+}/*# sourceMappingURL=style.css.map */

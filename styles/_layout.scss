@@ -1,0 +1,73 @@
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    @media screen and (width<=768px) {
+        gap: 5rem;
+        grid-template-columns: 1fr;
+    }
+    &::before {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        top: 0;
+        left: -10%;
+        width: 45%;
+        height: 90%;
+        background-image: linear-gradient(to bottom, var(--LightMagenta), var(--LightViolet), var(--LightViolet));
+        border-radius: 0 0 50% 50%;
+        -webkit-border-radius: 0 0 50% 50%;
+        -moz-border-radius: 0 0 50% 50%;
+        -ms-border-radius: 0 0 50% 50%;
+        -o-border-radius: 0 0 50% 50%;
+        @media screen and (width<=1080px) {
+            left: -25%;
+           height: 90%;
+           width: 50%;
+        }
+        @media screen and (width<=768px) {
+            left: -50%;
+           height: 65%;
+           width: 100%;
+        }
+    }
+}
+
+.app_section {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 5em;
+    @media screen and (width<=768px) {
+        margin-top: 5em;
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+.main_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
+    margin-bottom: 5em;
+    h1 {
+        color: var(--Main-heading-text);
+        font-size: 3.5rem;
+        margin: 1rem 0;
+        @media screen and (width<=768px) {
+            text-align: center;
+        }
+    }
+    p {
+        max-width: 450px;
+        @media screen and (width<=768px) {
+            text-align: center;
+        }
+    }
+    @media screen and (width<=768px) {
+        align-items: center;
+        padding: 0 1rem;
+    }
+}

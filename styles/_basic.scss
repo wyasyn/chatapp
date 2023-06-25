@@ -1,0 +1,44 @@
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    font-size: 65.5%;
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    // Text color
+    --UI-Sub-heading: hsl(276, 100%, 81%);
+    --Left-chat-text: hsl(276, 55%, 52%);
+    --Right-chat-text: hsl(271, 15%, 43%);
+    --Place-holder-text: hsl(206, 6%, 79%);
+    --Main-heading-text: hsl(271, 36%, 24%);
+    --P-text: hsl(270, 7%, 64%);
+
+    //Gradients
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+
+    //Secondary
+    --White: hsl(0, 0%, 100%);
+    --App-bg: hsl(270, 20%, 96%);
+    --Submit-bg: hsl(271, 36%, 24%);
+    --Radio-btn-outline: hsl(289, 100%, 72%);
+}
